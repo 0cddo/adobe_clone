@@ -5,6 +5,7 @@
 } */
 
 /* hover effect */
+/* 중복 ㅎ */
 .util-effect:hover {
   fill: #1473e6;
   color: #1473e6;
@@ -14,7 +15,10 @@
   text-decoration: underline;
 }
 
-.color-effect
+.color-effect:hover {
+  color: #9999;
+  animation-timing-function: ease-in-out;
+}
 
 /* nav */
 .lnb-tit {
