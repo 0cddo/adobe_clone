@@ -311,23 +311,23 @@ main .main-sent {
 main .main-sent a {
   color: #1473e6;
 }
-/* footer */
+/* footer main */
 footer .footer-wrapper {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   height: 593px;
   background-color: #fafafa;
   padding: 40px 0 20px;
 }
-/* footer .footer-org {
-  display: flex;
 
-} */
-footer .footer-guide-wrapper {
+/* footer .footer-guide-wrapper {
   display: flex;
   justify-content: center;
-}
+} */
 footer .footer-guide {
   display: flex;
+  justify-content: center;
 }
 footer .footer-guide ul {
   height: 375px;
@@ -405,6 +405,88 @@ footer .il::before {
   display: block;
   content: "";
   background: url(/src/icon/ai.svg) center/cover;
+  width: 20px;
+  height: 20px;
+}
+
+/* footer-nav-list */
+footer .footer-nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-nav-left {
+  display: flex;
+  align-items: center;
+}
+footer .change-region {
+  width: 100%;
+  position: relative;
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .globe-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+footer .change-region em::after {
+  position: absolute;
+  top: 7px;
+  right: -15px;
+  display: flex;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  color: #2c2c2c;
+  transform: rotate(45deg);
+  border-style: solid;
+}
+
+footer .footer-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0 20px 40px;
+}
+footer .footer-social li {
+  margin-right: 8px;
+}
+footer .facebook + em::before {
+  display: block;
+  content: "";
+  background: url(/src/icon/social-icon-facebook.svg) center/cover;
+  width: 20px;
+  height: 20px;
+}
+
+footer .twitter + em::before {
+  display: block;
+  content: "";
+  background: url(/src/icon/twitter.svg) center/cover;
+  width: 20px;
+  height: 20px;
+}
+
+footer .linked-in + em::before {
+  display: block;
+  content: "";
+  background: url(/src/icon/social-icon-linkedin.svg) center/cover;
+  width: 20px;
+  height: 20px;
+}
+footer .insta + em::before {
+  display: block;
+  content: "";
+  background: url(/src/icon/social-icon-instagram.svg) center/cover;
   width: 20px;
   height: 20px;
 }
