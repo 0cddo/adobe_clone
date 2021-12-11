@@ -313,7 +313,8 @@ main .main-sent a {
 }
 /* footer main */
 footer .footer-wrapper {
-  display: flex;
+  width: 100%;
+  /* display: flex; */
   justify-content: center;
   flex-direction: column;
   height: 593px;
@@ -321,10 +322,6 @@ footer .footer-wrapper {
   padding: 40px 0 20px;
 }
 
-/* footer .footer-guide-wrapper {
-  display: flex;
-  justify-content: center;
-} */
 footer .footer-guide {
   display: flex;
   justify-content: center;
@@ -358,7 +355,7 @@ footer .footer-gap {
 }
 .footer-download ul {
   margin: 0 auto;
-  width: 1400px;
+  max-width: 1400px;
   height: 35px;
   display: flex;
   justify-content: center;
@@ -410,28 +407,36 @@ footer .il::before {
 }
 
 /* footer-nav-list */
+
 footer .footer-nav-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1400px;
+
+  margin: 0 auto;
 }
 footer .footer-nav-left {
   display: flex;
   align-items: center;
+  /* justify-content: start; */
+  width: 100%;
 }
 footer .change-region {
   width: 100%;
   position: relative;
   font-size: 11px;
   display: flex;
-  justify-content: space-between;
+
   align-items: center;
+  color: #4b4b4b;
 }
 
 footer .globe-icon {
   width: 20px;
   height: 20px;
   margin-right: 8px;
+  fill: #4b4b4b;
 }
 footer .change-region em::after {
   position: absolute;
@@ -445,7 +450,7 @@ footer .change-region em::after {
   border-left-width: 0;
   border-right-width: 1px;
   border-bottom-width: 1px;
-  color: #2c2c2c;
+  color: #4b4b4b;
   transform: rotate(45deg);
   border-style: solid;
 }
@@ -489,4 +494,39 @@ footer .insta + em::before {
   background: url(/src/icon/social-icon-instagram.svg) center/cover;
   width: 20px;
   height: 20px;
+}
+
+footer .footer-nav-right {
+  display: flex;
+  justify-content: end;
+  font-weight: 300;
+  font-size: 11px;
+  width: 100%;
+  line-height: 1;
+}
+
+footer .copyright {
+  color: #9999;
+}
+footer .copyright small::after {
+  display: inline-block;
+  content: "/";
+  margin: 0 8px;
+}
+footer .footer-user-nav {
+  display: flex;
+  /* height: 100%; */
+  justify-content: space-between;
+  width: max-content;
+}
+footer .footer-user-nav li:not(:last-child) {
+  display: inline-block;
+  width: max-content;
+  margin-right: 20px;
+}
+footer .footer-user-nav li:not(:last-child)::after {
+  display: inline-block;
+  content: "/";
+  margin: 0 8px;
+  position: absolute;
 }
