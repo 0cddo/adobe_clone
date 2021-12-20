@@ -16,29 +16,45 @@ body {
 }
 
 /* header */
+header .click-menu1 {
+  position: absolute;
+  right: -1248px;
+}
+header .click-menu2,
+header .click-menu3,
+header .click-menu4 {
+  position: absolute;
+  right: 0.5px;
+}
+
 header .gnb-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 64px;
+  height: 2.5;
   max-width: 1400px;
   text-align: center;
   margin: 0 auto;
 }
 
 header .gnb {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+header .gnb li {
+  padding: 0 20px;
+  height: 100%;
+  line-height: 64px;
+}
+
+header .logo-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-header .gnb li {
-  display: flex;
-  justify-content: center;
-
-  /* width: 150px; */
-  /* height: 100%; */
-  padding: 0 20px;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
+  white-space: nowrap;
 }
 header .gnb h1 {
   color: #fa0f00;
@@ -53,20 +69,80 @@ header .logo::before {
   width: 25px;
   height: 22px;
 }
-header .logo-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
+header .gnb {
+  white-space: normal;
 }
-header .lnb-tit {
+
+header .menu1-big-item span::before {
+  display: block;
+  content: "";
+  background: url(/src/icon/creativecloud-app.svg) center/cover;
+  width: 26px;
+  height: 26px;
+  margin: 0 10px 0 28px;
+}
+
+header .menu2-big-item span::before {
+  display: block;
+  content: "";
+  background: url(/src/icon/acro_reader.svg) center/cover;
+  width: 26px;
+  height: 26px;
+  margin-right: 10px;
+}
+header .menu3-big-item span::before {
+  display: block;
+  content: "";
+  background: url(/src/icon/Adobe_Experience_Cloud_logo_RGB.svg) center/cover;
+  width: 26px;
+  height: 26px;
+  margin: 0 10px 0 28px;
+}
+/* gnb-card */
+header .gnb-card {
+  width: 264px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header .gnb-card-text {
+  width: 100%;
+  height: 180px;
+  text-align: left;
+  color: #000;
+  background-color: #ff62f6;
+  box-sizing: border-box;
+  margin-top: 40px;
+}
+header .gnb-card-text h4 {
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+header .gnb-card-text h4,
+header .gnb-card-text h5 {
+  font-weight: bold;
+  line-height: 1.5;
+}
+header .gnb-card-text p {
+  line-height: 1;
+}
+header .gnb-card-text a {
+  text-decoration: underline;
+}
+header .gnb-card-img {
+  width: 264px;
+  height: 170px;
+}
+
+header .lnb-tit h2 {
   color: #2c2c2c;
   font-weight: 400;
   font-size: 14px;
   cursor: pointer;
   position: relative;
 }
-header .lnb-tit::after {
+header .lnb-tit h2::after {
   position: absolute;
   top: 3px;
   right: -15px;
@@ -98,6 +174,12 @@ header .sign-in {
   margin-left: 18px;
 }
 
+/* gnb button toggle */
+.hidden {
+  display: none;
+}
+
+/* header section */
 header .header-section {
   display: flex;
   justify-content: start;

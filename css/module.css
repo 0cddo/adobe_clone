@@ -3,27 +3,18 @@
   position: relative;
 }
 
-/* menu flex 정리할 것!!! */
+/* menu flex  */
 .gnb-box-wrapper {
   display: flex;
-  /* flex-direction: column; */
-  /* align-content: center; */
   justify-content: center;
   height: max-content;
   background-color: #f9f5f5;
   width: 100vw;
   margin: 0 auto;
   position: absolute;
-  right: -1248px;
   z-index: 20;
   padding-bottom: 50px;
 }
-/* .gnb-box-wrapper-in {
-  display: flex;
-  justify-content: center; 
-   max-width: 1200px; 
-   width: 100vw;
-} */
 .gnb-box {
   width: 100%;
   display: flex;
@@ -32,26 +23,17 @@
   font-size: 14px;
 }
 
-/* .gnb-box-wrapper {
-  display: flex;
-  /* flex-direction: column;
-  align-content: space-between;
-  width: 100vw;
-  margin: 0 auto;
-}
-.gnb-box {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-} */
-
 .gnb-item-wrapper {
+  position: relative;
   margin-top: 40px;
   width: max-content;
 }
 .gnb-item-title {
-  border-bottom: 1px solid #c9c9c9db;
+  width: max-content;
+  display: block;
+  /* border-bottom: 1px solid #c9c9c9db; */
   text-align: left;
+  padding-left: 0;
 }
 .gnb-item-title h4 {
   display: block;
@@ -60,7 +42,13 @@
 }
 .gnb-big-item {
   margin-bottom: 20px;
+  padding: 8px 32px 4px;
 }
+.gnb-big-item-organ {
+  display: flex;
+  justify-content: space-between;
+}
+
 .gnb-item,
 .gnb-big-item {
   display: flex;
@@ -82,10 +70,14 @@
   display: block;
   background-color: #c9c9c920;
 }
+.gnb-item-title + li {
+  border-top: 1px solid #c9c9c9db;
+}
 
 .gnb-item strong {
   color: #2c2c2c;
   font-size: 14px;
+  font-weight: light;
 }
 .gnb-item strong:hover {
   color: #1473e6;
@@ -97,7 +89,9 @@
   font-weight: 400;
   color: #656565;
 }
-
+a.gnb-item-blue {
+  color: #1473e6;
+}
 /* gnb-card */
 
 /* hover effect */
@@ -135,6 +129,8 @@
   position: relative;
 }
 .btn {
+  display: flex;
+  justify-content: start;
   padding: 0 14px;
   border-radius: 18px;
   height: 32px;
