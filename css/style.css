@@ -5,6 +5,91 @@ body {
   width: 100vw;
   height: 100vh;
 }
+/* media query */
+/* large device (desktop) */
+@media screen and (max-width: 1600px) {
+  header div.gnb-box-wrapper {
+    display: none;
+  }
+  header aside.gnb-search-box {
+    display: none;
+  }
+}
+/* medium device (tablet) */
+@media screen and (max-width: 899px) {
+  /* global-nav */
+  header nav.gnb-wrapper {
+    max-width: 899px;
+    margin: 0 20px;
+    position: relative;
+    display: flex;
+  }
+  header li.logo-wrapper {
+    margin-left: 35px;
+  }
+  header button.lnb-tit {
+    display: none;
+  }
+
+  header span.search {
+    display: none;
+  }
+  header ul.user-util {
+    margin-right: 20px;
+  }
+  header #toggle-btn {
+    background: url(../src/icon/toggle.png) center/contain;
+    position: absolute;
+    width: 18px;
+    height: 22px;
+    cursor: pointer;
+  }
+  footer section.footer-nav-list {
+    flex-wrap: wrap;
+  }
+  footer ul.footer-nav-right {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    padding: 10px;
+    line-height: 1.5em;
+  }
+  footer section.footer-guide {
+    display: flex;
+    flex-direction: column;
+  }
+  footer section.footer-guide ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: max-content;
+  }
+  footer .footer-s-guideline {
+    width: 800px;
+    display: block;
+    border-top: 1px solid #656464;
+    padding: 10px 0;
+  }
+  footer section.footer-guide li a {
+    display: none;
+  }
+  footer section.footer-guide li h2 {
+    font-size: 15px;
+  }
+  footer li h2.footer-gap {
+    margin-top: 0;
+  }
+  footer section.footer-download ul {
+    border: none;
+  }
+}
+/* small device (mobile) */
+@media screen and (max-width: 690px) {
+  footer section.footer-download {
+    display: none;
+  }
+}
 
 /* screen out에 대한 코드 확인할 것  */
 .screen-out {
@@ -17,17 +102,21 @@ body {
 
 /* header */
 header .click-menu1 {
+  width: 100vw;
   position: absolute;
+  top: 63px;
   right: -1248px;
 }
 header .click-menu2,
 header .click-menu3,
 header .click-menu4 {
   position: absolute;
-  right: 0.5px;
+  top: 60px;
+  right: -140px;
 }
 
 header .gnb-wrapper {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -158,12 +247,20 @@ header .lnb-tit h2::after {
   transform: rotate(45deg);
   border-style: solid;
 }
+header .gnb-search-wrapper {
+  position: absolute;
+  top: 80px;
+  background-color: #fff;
+  width: 100vw;
+}
 
+header .gnb-search-box {
+  width: 100%;
+}
 header .user-util {
   display: flex;
   justify-content: space-between;
 }
-
 header .search {
   cursor: pointer;
 }
