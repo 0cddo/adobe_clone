@@ -11,12 +11,12 @@ body {
 /* media query */
 /* large device (desktop) */
 @media screen and (max-width: 1600px) {
-  header div.gnb-box-wrapper {
+  /* header div.gnb-box-wrapper {
     display: none;
   }
   header aside.gnb-search-box {
-    display: none;
-  }
+    display: none; 
+  } */
 }
 /* medium device (tablet) */
 @media screen and (max-width: 899px) {
@@ -26,12 +26,13 @@ body {
     margin: 0 20px;
     position: relative;
     display: flex;
+    justify-content: space-between;
+  }
+  header ul.gnb {
+    margin: 0;
   }
   header li.logo-wrapper {
     margin-left: 35px;
-  }
-  header button.lnb-tit {
-    display: none;
   }
 
   header span.search {
@@ -48,13 +49,27 @@ body {
     cursor: pointer;
   }
 
+  /* gnb-toggle 반응형 */
+  header ul.gnb-menu-wrapper {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* max-width: 899px; */
+    /* width: 100%; */
+    /* display: none; */
+  }
+  header button.lnb-tit {
+    display: none;
+  }
+  header div.gnb-box-wrapper {
+    display: none;
+  }
   /* visual section(header-section)  */
   header section.header-section {
+    /* position: relative; */
+    padding: 0;
+    display: block;
     display: flex;
     flex-direction: column;
-    height: max-content;
-    max-width: 899px;
-    width: 899px;
   }
   header div.header-section-img {
     background: url(../src/img/tablet/Homepage_Pod0_Tablet770x530-v2.jpeg)
@@ -63,18 +78,26 @@ body {
     height: 650px;
   }
   header article.header-cont {
-    background-color: #fff;
-    color: #2c2c2c;
-    padding: 40px;
+    /* display: block; */
+    height: 100px;
+    width: 600px;
+    position: absolute;
+    top: 650px;
+    color: #000;
+    padding: 50px;
+    margin: 50px 0;
   }
   header .header-cont > * {
     padding-bottom: 10px;
   }
-  header 
+  header div.gnb-box-wrapper 
   /* main item section */
   main main.main {
     max-width: 899px;
     width: 899px;
+  }
+  main div.lnb-wrapper {
+    margin-top: 250px;
   }
   main ul.lnb {
     flex-direction: column;
@@ -144,11 +167,12 @@ body {
   }
   footer div.footer-wrapper {
     max-width: 899px;
+    width: 100%;
   }
   footer div.footer-guide-wrapper {
     max-width: 900px;
-    width: 1000px;
-    /* margin: 0 auto; */
+    width: 100%;
+    /* padding-right: -20px; */
   }
   footer section.footer-guide {
     display: flex;
@@ -227,36 +251,33 @@ body {
 }
 
 /* header */
-header .click-menu1 {
-  width: 100vw;
-  position: absolute;
-  top: 63px;
-  right: -1248px;
+/* header .click-menu1 {
+  /* position: absolute;
+  top: 63px; */
+/* right: -1248px; 
 }
 header .click-menu2,
 header .click-menu3,
 header .click-menu4 {
-  position: absolute;
+  /* position: absolute;
   top: 60px;
-  right: -140px;
-}
+  right: -140px; 
+} */
 
 header .gnb-wrapper {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  height: 2.5;
-  max-width: 1400px;
   text-align: center;
-  margin: 0 auto;
 }
 
 header .gnb {
   height: inherit;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   /* align-items: center; */
+  margin-right: 500px;
 }
 header .gnb li {
   padding: 0 20px;
@@ -286,6 +307,10 @@ header .logo::before {
 }
 header .gnb {
   white-space: normal;
+}
+header .gnb-menu-wrapper {
+  display: flex;
+  justify-content: start;
 }
 
 header .menu1-big-item span::before {
@@ -381,8 +406,16 @@ header .gnb-search-wrapper {
   width: 100vw;
 }
 
-header .gnb-search-box {
-  width: 100%;
+header .gnb-search-box input {
+  width: 1200px;
+  height: 30px;
+  border: 1px solid #1473e6;
+  border-radius: 3px;
+}
+header .gnb-search-box span {
+  position: fixed;
+  top: 90px;
+  right: 270px;
 }
 header .user-util {
   display: flex;
@@ -398,19 +431,30 @@ header .sign-in {
   margin-left: 18px;
 }
 
-/* gnb button toggle */
+/* responsive toggle */
 .hidden {
   display: none;
 }
-
+.dim {
+  background: rgba(0, 0, 0, 0.673);
+}
+.active h2 {
+  display: none;
+}
+.toggle {
+  display: none;
+}
+/* .toggle-on {
+  display: block;
+} */
 /* header section */
 header .header-section {
   display: flex;
   justify-content: start;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 650px;
-  background-color: #19005c;
+  background-color: #a8b857;
   color: #fff;
   line-height: 1.6;
 }
@@ -453,11 +497,11 @@ main .card p:nth-child(3) {
   line-height: 1.2;
 }
 /* main */
-main .header-section .wide-card {
+/* main .header-section .wide-card {
   display: inline-flex;
   width: 1400px;
   height: 100%;
-}
+} */
 
 main .lnb-wrapper {
   margin: 0 12px 40px;
